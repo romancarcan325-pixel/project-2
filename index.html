@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои Заметки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Мои Заметки</h2>
+            <button id="openModalBtn" class="new-note">Новая Заметка</button>
+
+            <div class="tags">
+                <p>Теги</p>
+                <ul id="tagsList">
+                    <li class="active">Все</li>
+                    <li>Идеи</li>
+                    <li>Личное</li>
+                    <li>Работа</li>
+                    <li>Список покупок</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск">
+                <button>🔍</button>
+            </div>
+            <div class="notes" id="notes"></div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Новая Заметка</h3>
+            <form id="noteForm">
+                <input type="text" id="noteTitle" placeholder="Название заметки" required>
+                <input type="text" id="noteTag" placeholder="Тег (например: Работа)" required>
+                <button type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключение скрипта -->
+    <script src="script.js"></script>
+</body>
+</html>
